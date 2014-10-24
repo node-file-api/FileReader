@@ -1,12 +1,19 @@
 {
-  "name"          : "filereader",
-  "description"   : "HTML5 FileAPI `FileReader` for Node.JS.",
-  "url"           : "http://github.com/node-file-api/FileReader",
-  "keywords"      : ["html5", "jsdom", "file-api", "FileReader", "file-reader", "file", "reader"],
-  "author"        : "AJ ONeal <coolaj86@gmail.com>",
-  "contributors"  : [],
-  "dependencies"  : {
-                    },
-  "main"          : "FileReader.js",
-  "version"       : "0.10.3"
+  "name": "filereader",
+  "description": "HTML5 FileAPI `FileReader` for Node.js",
+  "url": "http://github.com/node-file-api/FileReader",
+  "keywords": [
+    "html5",
+    "jsdom",
+    "file-api",
+    "FileReader",
+    "file-reader",
+    "file",
+    "reader"
+  ],
+  "author": "AJ ONeal <coolaj86@gmail.com>",
+  "contributors": [],
+  "dependencies": {},
+  "main": "FileReader.js",
+  "version": "0.10.3"
 }
