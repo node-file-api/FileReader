@@ -10,7 +10,8 @@ See <https://github.com/node-file-api/file-api> and <https://developer.mozilla.o
 ```javascript
 'use strict';
 
-var fileReader = new FileReader()
+var FileReader = require('filereader')
+  , fileReader = new FileReader()
   ;
 
 fileReader.setNodeChunkedEncoding(true || false);
