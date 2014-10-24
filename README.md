@@ -32,7 +32,6 @@ fileReader.onloadend', function () {
   console.log("Success");
 });
 ```
-```
 
 Implemented API
 
