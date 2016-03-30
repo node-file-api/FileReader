@@ -35,12 +35,21 @@
     return dataUrl;
   }
 
+  function toArrayBuffer(buffer) {
+    var ab = new ArrayBuffer(buffer.length);
+    var view = new Uint8Array(ab);
+    for (var i = 0; i < buffer.length; ++i) {
+      view[i] = buffer[i];
+    }
+    return view;
+  }
+
   function mapDataToFormat(file, data, format, encoding) {
     // var data = self.result;
 
     switch(format) {
       case 'buffer':
-        return data;
+        return toArrayBuffer(data);
         break;
       case 'binary':
         return data.toString('binary');
