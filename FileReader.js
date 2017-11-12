@@ -119,6 +119,15 @@
         return;
       }
 
+      // Create a read stream from a blob-polyfill Blob
+      if (file.data) {
+        process.nextTick(function () {
+          stream.emit('data', Buffer.from(file.data));
+          stream.emit('end');
+        });
+        file.stream = stream;
+        return;
+      }
 
       // Create a read stream from a file
       if (file.path) {
@@ -262,7 +271,7 @@
 
     function readFile(_file, format, encoding) {
       file = _file;
-      if (!file || !file.name || !(file.path || file.stream || file.buffer)) {
+      if (!file || !(file.name || file.data) || !(file.path || file.stream || file.buffer || file.data)) {
         throw new Error("cannot read as File: " + JSON.stringify(file));
       }
       if (0 !== self.readyState) {
