@@ -122,7 +122,7 @@
       // Create a read stream from a blob-polyfill Blob
       if (file.data) {
         process.nextTick(function () {
-          stream.emit('data', Buffer.from(file.data));
+          stream.emit('data', Buffer.from(file.data, "ascii"));
           stream.emit('end');
         });
         file.stream = stream;
