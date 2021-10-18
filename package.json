@@ -11,6 +11,10 @@
     "file",
     "reader"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/node-file-api/FileReader.git"
+  },
   "author": "AJ ONeal <coolaj86@gmail.com>",
   "contributors": [],
   "dependencies": {},
